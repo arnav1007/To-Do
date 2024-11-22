@@ -1,38 +1,164 @@
-.App {
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-image: url('./assets/bg1.jpg'); /* Add your background image URL */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   text-align: center;
+  font-family: "Poppins", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.form-container {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.form-container .heading {
+  flex: 1; 
+  text-align: left;
+  font-size: 24px;
+  color: #7a42f4;
+  font-weight: bold;
+}
+
+.form-container .task-form {
+  flex: 2; 
+  margin-left: 20px;
+}
+
+
+.task-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+  width: 100%;
+}
+
+.task-form input {
+  width: 80%; 
+  padding: 12px;
+  margin-right: 2px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  outline: none;
+  transition: all 0.3s ease;
+  box-shadow: inset 0px 3px 5px rgba(0, 0, 0, 0.05);
+}
+
+.task-form input:focus {
+  box-shadow: inset 0px 3px 8px rgba(0, 0, 0, 0.1);
+  border-color: #7a42f4;
+}
+
+.task-form button {
+  padding: 10px 15px;
+  background-color: #7a42f4;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.task-form button:hover {
+  background-color: #5a31c8;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  background: #fff;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.05);
+  
+}
+
+.task-item button {
+  border: none;
+  background: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.task-item button.delete {
+  background-color: #ff4d4d;
+  color: #fff;
+}
+
+.task-item button.delete:hover {
+  background-color: #e60000;
+}
+
+.task-item button.edit {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.task-item button.edit:hover {
+  background-color: #0056b3;
+}
+
+
+.clear-all-container {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-top: 30px;
+}
+
+.clear-all-btn {
+  padding: 15px 30px;
+  background: linear-gradient(to right, #ff6f61, #ff4757);
   color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 8px 15px rgba(255, 71, 87, 0.3);
+  transition: all 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.clear-all-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 20px rgba(255, 71, 87, 0.5);
+  background: linear-gradient(to right, #ff4757, #ff6f61);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h1 {
+  text-align: left;
+  color: #333;
+  font-size: 24px;
 }
